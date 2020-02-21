@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # local apps
     'home.apps.HomeConfig',
     'neigbour.apps.NeigbourConfig',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+AUTH_USER_MODEL = 'users.CustomUser'

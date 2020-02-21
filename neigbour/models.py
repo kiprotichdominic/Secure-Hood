@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from users.models import CustomUser
 
 
 
@@ -8,7 +9,7 @@ class NeigbourHood(models.Model):
     name = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(allow_unicode=True, unique = True)
     description = models.TextField(blank=True, default='')
-    members = models.ManyToManyField(User, through='GroupMember')
+    members = models.ManyToManyField(CustomUser, through='NeigbourHoodMember')
     
     def __str__(self):
         return self.name
@@ -25,8 +26,8 @@ class NeigbourHood(models.Model):
         ordering = ["name"]
         
 class NeigbourHoodMember(models.Model):
-    neigbourhood = models.ForeignKey(NeigbourHood,related_name='membership')
-    user = models.ForeignKey(User,related_name='user_neigbourhood')
+    neigbourhood = models.ForeignKey(NeigbourHood,related_name='membership', on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser,related_name='user_neigbourhood', on_delete=models.CASCADE)
     
     def __str__(self):
         return self.user.username
