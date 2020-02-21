@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+# 887649150219-tr3n2k1b6lntthaf8a67f1lghhrgiaic.apps.googleusercontent.com
 urlpatterns = [
     path('', include('home.urls')),
     path('accounts/', include('allauth.urls')),
