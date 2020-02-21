@@ -5,3 +5,9 @@
 .mynav {
     background-color:transparent !important; 
 }
+/* hero */
+.myhero {
+    height: 70vh;
+    width: 100%;
+    background:url('../safe-zone-animation.gif') no-repeat center center/cover;
+}
