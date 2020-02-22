@@ -11,6 +11,9 @@ whitenoise = "*"
 gunicorn = "*"
 django-tailwind = "*"
 django-allauth = "*"
+django-heroku = "*"
+python-decouple = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.7"
