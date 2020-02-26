@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-    'django.contrib.sites', 
     # 3rd party
     'allauth', 
     'allauth.account', 
