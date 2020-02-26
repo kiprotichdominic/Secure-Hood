@@ -1,4 +1,4 @@
-"""neighbourhood URL Configuration
+"""hoodproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-# 887649150219-tr3n2k1b6lntthaf8a67f1lghhrgiaic.apps.googleusercontent.com
+
 urlpatterns = [
     path('', include('home.urls')),
-    path('account/', include('allauth.urls')),
+    path('groups/',include("groups.urls")),
+    path('users/', include('users.urls')), 
+    path('posts/', include("posts.urls")),
+    path('users/', include('django.contrib.auth.urls')),
+    path('accounts/', include('allauth.urls')),
     path('admin/', admin.site.urls),
 ]

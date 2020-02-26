@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
 <div class="container">
-  <a class="navbar-brand" href="#">Secure Zone</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Secure Zone</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,23 +8,32 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active mynav">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       {% if user.is_authenticated %}
+            <li class="nav-item active mynav">
+        <a class="nav-link" href="{% url 'posts:create' %}">Post</a>
+      </li>
+            <li class="nav-item active mynav">
+        <a class="nav-link" href="{% url 'groups:all' %}">Groups</a>
+      </li>
+            {% comment %} <li class="nav-item active mynav">
+        <a class="nav-link" href="{% url 'neigbour:create' %}">Create Group</a>
+      </li> {% endcomment %}
       <li class="nav-item active mynav">
-        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
       </li>
       <li class="nav-item active mynav">
         <a class="nav-link" href="#">Profile</a>
       </li>
       {% else %}
       <li class="nav-item active mynav">
-        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
       </li>
       <li class="nav-item active mynav">
-        <a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a>
+        <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
       </li>
       {% endif %}
     </ul>

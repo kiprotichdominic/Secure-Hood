@@ -8,12 +8,9 @@ verify_ssl = true
 [packages]
 django = "==2.2.10"
 whitenoise = "*"
-gunicorn = "*"
-django-tailwind = "*"
 django-allauth = "*"
-django-heroku = "*"
-python-decouple = "*"
-dj-database-url = "*"
+django-crispy-forms = "*"
+django-braces = "*"
 
 [requires]
 python_version = "3.7"
