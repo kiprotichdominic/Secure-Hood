@@ -12,6 +12,7 @@ django-allauth = "*"
 django-crispy-forms = "*"
 django-braces = "*"
 gunicorn = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"

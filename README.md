@@ -75,7 +75,7 @@ This application is developed using [Python3.6](https://www.python.org/doc/), [D
 Kiprotich Dominic Korir
 
 
-[Email Me!](kiprotichkorir36@gmail.com)  @kiprotichkorir
+[Email Me!](kiprotichkorir36@gmail.com)
 
 
 ### License
