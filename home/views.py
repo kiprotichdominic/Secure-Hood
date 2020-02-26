@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from django.views import generic
+from groups.models import Group
 
-# Create your views here.
-from django.views.generic import TemplateView
 
-
-class HomePageView(TemplateView):
+class HomePageView(generic.ListView):
+    model = Group
     template_name = 'home/index.html'
